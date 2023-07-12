@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import List from "./List";
 import CitiesList from "./CitiesList";
 import Result from "./Result";
+import "./App.css";
 
 const App = () => {
   const [selectedState, setSelectedState] = useState(null);
@@ -18,8 +19,8 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>City Selector</h1>
+    <div className="app">
+      <h1>Location Selector:</h1>
       <List onSelectState={handleStateSelection} onSelectCities={setCities} />
       <CitiesList cities={cities} onSelectCity={handleCitySelection} />
       <Result selectedState={selectedState} selectedCity={selectedCity} />
